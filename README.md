@@ -123,6 +123,6 @@ $$\text{Total Price} = \sum (\text{Item Price} \times \text{Selected Quantity})$
 
 ### ER Diagram Image
 
-<img src="images/RMs.png" alt="ER Diagram">
+<img src="R-M-S.png" alt="ER Diagram">
 
 ```
