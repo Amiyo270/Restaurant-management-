@@ -117,66 +117,12 @@ $$\text{Total Price} = \sum (\text{Item Price} \times \text{Selected Quantity})$
 * The system **must** provide a secure presentation routine listing all registered team members.
 
 
-
 ---
 
 ## 4. System Models
 
-> * **CONTEXT DIAGRAM**
-> 
-> 
-> ```
->  +------------------+         +-----------------------------+         +---------------+
->  |                  | ------> |  Create Item / Add Staff    | ------> |               |
->  |    Admin User    |         +-----------------------------+         |  Restaurant   |
->  |                  | <------ |  View Complete Reports      | <------ |  Core State   |
->  +------------------+         +-----------------------------+         |  (Database)   |
->                                                                       |               |
->  +------------------+         +-----------------------------+         |               |
->  |                  | ------> |  Add To Cart / Check Stock  | ------> |               |
->  |  Customer User   |         +-----------------------------+         +---------------+
->  |                  | <------ |  View Menu / Pay Final Bill | <-------+
->  +------------------+         +-----------------------------+
-> 
-> ```
-> 
-> 
+### ER Diagram Image
 
-> * **ACTIVITY DIAGRAM (Order Pipeline)**
-> 
-> 
-
-```
-> [Select Item] -> [Input Quantity] -> {Quantity <= Available Stock?}
->                                              |                |
->                                         (No) |          (Yes) |
->                                              v                v
->                                    [Reject Request]   [Deduct Menu Stock]
->                                                               |
->                                                               v
->                                                       [Stage into Cart]
-> ```
-
----
-
-## 5. System Evolution
-
-### Assumptions
-* Future expansions will transition the application away from console prompts to web interfaces as listed in the project views from **Screenshot 2026-05-30 012626.png**.
-* Distributed multi-terminal configurations will eventually coordinate synchronized global item tracking.
-
-### Expected Changes
-* Integration of financial external APIs for electronic billing.
-* Persistent memory frameworks utilizing robust NoSQL systems.
-
----
-
-## 6. Appendices
-
-### Hardware Requirements
-* Any system capable of compiling/interpreting modern object-oriented software structures with basic I/O interfaces.
-
-### Database Requirements
-* The architecture must sustain isolated logical mapping identities between transient object instances to avoid variable conflicts.
+<img src="images/RMs.png" alt="ER Diagram">
 
 ```
